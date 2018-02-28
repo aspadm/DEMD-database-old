@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h3>0. Introduction</h3>
+Can you use console tools easily? Somebody not. So, it is a simple GUI app for novices (and not only), who want browse DEMD files and save some of it in common formats as OBJ/FBX/3DS/STL for models and DDS/TGA/PNG/JPG/TIFF for textures. And yes, you also can convert audio (without preview) and export all other formats without conversion.
+
+<h3>1. License and thanks</h3>
+App is under MIT license and you can ask the author to give a source code. App can use components by other licenses - check the file LICENSES.txt.<br>
+Big thanks Volfin, Sir Kaine for their DEMD tools.<br>
+And thanks for all who helped me translate the app - maybe you one of them, %username%? (if not - you can join)
+
+<h3>2. Get started</h3>
+So, what about exploring DEMD files?<br>
+But first you must do some steps:<br>
+1) Download this app and run it for getting instructions - DONE!<br>
+2) We need 4 sub-programms:<br>
+1 - game archives unpacker (writed by Sir Kaine)<br>
+2 - Blender 3d (blender.org) and plugin for it (writed by volfin)<br>
+3 - texture (tex) converter<br>
+4 - texture (dds) converter<br>
+All components already must be in folder 'tools', but we must check it:<br>
+go to the file-settings and check for red buttons on first tab - if there are none of this, you are lucky:)<br>
+If not, choose tools manually.<br>
+After that, if in first tab of settings all 4 programs is green, let's start exploring!
+
+<h3>3. Unpacking archieves</h3>
+Now we need to extract DEMD game archives, so we need installed game (or only 'runtime' folder).<br>
+If you already used DEMDExtract by Sir Kane, skip this step.<br>
+Simple click "file"-"convert game archives", choose your DEMD game 'runtime' folder (often it is C:\Program Files\Steam\steamapps\common\Deus Ex Mankind Divided\runtime, in this folder a lot of .archive and .pc_headerlib files) and folder where to store unpacked data. There are needed about 23 GB of free space.
+After that, you can make a couple of tea or coffee - process not fast... But when console window will close, it's time for next operation - building of file tree! Don't worry, it's faster and fully automatical:)
+
+<h3>3.1 How to open already unpacked base</h3>
+Simple press "ctrl+O" and choose "namemap.txt" file - if there aren't file tree, it will be builded automatical. So it's time for another couple of tea:)
+
+<h3>4. Looking for files</h3>
+OK: on the left side you can see file tree, on the right - viewport. Simple click by files on filetree and they will be opened for seeing and exporting!<br>
+(If not - some of program components don't configured or this file format don't provided yet).<br>
+<h4>Controls:</h4>
+mouse left button: dragging<br>
+mouse right button: rotation<br>
+mouse wheel: zooming<br>
+mouse middle dragging: zooming<br>
+mouse middle double click: reset view
+
+<h3>5. Exporting files</h3>
+You can save current file by pressing "file-export as..." or "ctrl+S" - it provide standart save dialog.<br>
+Another way - use the fast export option - simple click "ctrl+E" and file will be saved in preconfigured folder in chosen format.<br>
+If you want save all files in selected folder subfolders, you can use "mass export" option.
+
+<h3>6. Trobleshooting</h3>
+If you see some errors, please contact me. I wrote this app on summer holidays without thinking of program architecture - all I need is about ten files:) (battle riffle model and Adam)
+
+<h3>7. For experiments</h3>
+File tree in my program builds from this types:<br>
+"pc_weightedprim", "pc_tex", "pc_prim", "pc_linkedprim", "pc_hair", "pc_apex", "pc_swf", "pc_fsb".<br>
+If you want change it, close app, delete the file "converted_base.txt" (if exist) in folder where lay "NameMap.txt" (do not delete it!), create file "unpack_ext.txt" in app folder with names of formats one per line, start app and go to step 3.1. Enjoy!
+</body>
+</html>
